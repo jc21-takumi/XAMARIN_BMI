@@ -16,11 +16,11 @@ namespace App2
 
 {
 
-    public partial class MainPage : ContentPage
+    public partial class MainPage2 : ContentPage
 
     {
 
-        public MainPage()
+        public MainPage2()
 
         {
 
@@ -51,14 +51,15 @@ namespace App2
                 float result = weight / (height * height);
                 Navigation.PushModalAsync(new NavigationPage(new BmiResult(result)));
             }
-        }
+
+            }
 
 
 
         private void ButtonClickEvent(object sender, EventArgs e)
 
         {
-
+            
             float height = float.Parse(EntryHeight.Text);
             float weight = int.Parse(EntryWeight.Text);
             if (height > 2.72)
@@ -68,9 +69,7 @@ namespace App2
             }
             else
             {
-
                 LabelResult.Text = "" + (weight / (height * height));
-
             }
 
         }
